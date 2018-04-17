@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -12,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private String [] myDataset = { "nota1", "nota 2", "fai la spesa","paga bolletta luca", "dadsadasa", "dsasdasd", "dassad"};
-
+    //private String [] myDataset = { "nota1", "nota 2", "fai la spesa","paga bolletta luca", "dadsadasa", "dsasdasd", "dassad"};
+      private ArrayList<Note>myDataset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        myDataset =new ArrayList<>();
+        Note spesa =new Note(title:"PIN, ");
+        myDataset.add(spesa);
         mAdapter = new NotesAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
