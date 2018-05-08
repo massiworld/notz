@@ -7,21 +7,12 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_title"/>
+        android:id="@+id/dialog_title_et"
+        android:layout_height="wrap_content" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_description"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm"
-        android:id="@+id/edit_confirm"/>
-
-
-
+        android:id="@+id/dialog_description_et"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

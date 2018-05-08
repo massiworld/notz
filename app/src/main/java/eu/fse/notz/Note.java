@@ -1,32 +1,55 @@
 package eu.fse.notz;
 
-/**
- * Created by Amministratore on 12/04/2018.
- */
-
 public class Note {
-    private String title,descripion;
+
+    private String title,description;
     private int id;
+    private boolean isShownOnTop;
 
-    private boolean isShowOnTop;
 
-   public Note(String title, String descripion){
-       this.title=title;
-       this.descripion = description;
-   }
+    public Note(String title, String description){
+        this.title = title;
+        this.description = description;
+
+    }
+
+
+    public Note (){
+
+    }
+
+
+
 
     public String getTitle() {
         return title;
     }
 
-    
-}
-public int getDescription() {
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    public int getdescription() {
-        return description;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isShownOnTop() {
+        return isShownOnTop;
+    }
+
+    public void setShownOnTop(boolean shownOnTop) {
+        isShownOnTop = shownOnTop;
     }
 }
